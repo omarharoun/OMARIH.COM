@@ -1,0 +1,21 @@
+{
+  "name": "ihsan-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+  "apps/*",
+  "packages/*",
+  "services/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace apps/web run dev",
+  "dev:api": "npm --workspace apps/api run dev",
+  "dev:ai": "npm --workspace services/ai run dev",
+  "dev:payments": "npm --workspace services/payments run dev",
+  "dev:store": "npm --workspace services/store run dev",
+  "dev:social": "npm --workspace services/social run dev",
+  "dev:mobile": "npm --workspace services/mobile run dev",
+    "build": "npm -ws run build",
+    "typecheck": "npm -ws run typecheck"
+  }
+}

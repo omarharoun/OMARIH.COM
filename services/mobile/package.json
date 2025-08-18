@@ -1,0 +1,10 @@
+{
+  "name": "ihsan-mobile",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Mobile service placeholder' && node -e \"console.log('mobile placeholder')\"",
+    "build": "echo build mobile",
+    "typecheck": "echo typecheck mobile"
+  }
+}

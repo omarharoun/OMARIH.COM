@@ -1,0 +1,38 @@
+version: '3.9'
+services:
+  web:
+    build: ./apps/web
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./apps/web/.env.local
+    environment:
+      - NEXT_PUBLIC_AI_URL=http://ai:4101
+      - NEXT_PUBLIC_STORE_URL=http://store:4103
+      - NEXT_PUBLIC_SOCIAL_URL=http://social:4104
+      - NEXT_PUBLIC_PAYMENTS_URL=http://payments:4102
+    depends_on:
+      - ai
+      - store
+      - social
+      - payments
+
+  ai:
+    build: ./services/ai
+    environment:
+      - PORT=4101
+
+  payments:
+    build: ./services/payments
+    environment:
+      - PORT=4102
+
+  store:
+    build: ./services/store
+    environment:
+      - PORT=4103
+
+  social:
+    build: ./services/social
+    environment:
+      - PORT=4104

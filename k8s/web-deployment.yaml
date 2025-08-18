@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ihsan-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ihsan-web
+  template:
+    metadata:
+      labels:
+        app: ihsan-web
+    spec:
+      containers:
+        - name: web
+          image: ihsan-web:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NEXT_PUBLIC_AI_URL
+              value: http://ihsan-ai:4101
+            - name: NEXT_PUBLIC_STORE_URL
+              value: http://ihsan-store:4103
+            - name: NEXT_PUBLIC_SOCIAL_URL
+              value: http://ihsan-social:4104
+            - name: NEXT_PUBLIC_PAYMENTS_URL
+              value: http://ihsan-payments:4102
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ihsan-web
+spec:
+  selector:
+    app: ihsan-web
+  ports:
+    - port: 80
+      targetPort: 3000
+      protocol: TCP
+  type: LoadBalancer

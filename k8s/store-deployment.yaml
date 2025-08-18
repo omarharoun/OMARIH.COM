@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ihsan-store
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ihsan-store
+  template:
+    metadata:
+      labels:
+        app: ihsan-store
+    spec:
+      containers:
+        - name: store
+          image: ihsan-store:latest
+          ports:
+            - containerPort: 4103
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ihsan-store
+spec:
+  selector:
+    app: ihsan-store
+  ports:
+    - port: 4103
+      targetPort: 4103
+      protocol: TCP
+  type: ClusterIP
