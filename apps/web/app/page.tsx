@@ -27,7 +27,7 @@ export default function HomePage() {
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '64px', alignItems: 'center' }}>
           <div>
             <h1 style={{ fontSize: '48px', fontWeight: 'bold', marginBottom: '24px', color: '#1a202c', lineHeight: '1.2' }}>
-              Hello There!<br />I'm IHSAN.
+              Hello there<br />It's IHSAN!
             </h1>
             <p style={{ fontSize: '24px', color: '#4a5568', marginBottom: '32px', lineHeight: '1.5' }}>
               I'm an author, creator, and productivity expert.
