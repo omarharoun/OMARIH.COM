@@ -17,6 +17,7 @@ export default function HomePage() {
             <Link href="/fundamentals" style={{ color: '#4a5568', textDecoration: 'none', fontWeight: '500' }}>Learn</Link>
             <Link href="/templates" style={{ color: '#4a5568', textDecoration: 'none', fontWeight: '500' }}>Templates</Link>
             <Link href="/articles" style={{ color: '#4a5568', textDecoration: 'none', fontWeight: '500' }}>Articles</Link>
+            <Link href="https://store.omarih.com" target="_blank" rel="noopener noreferrer" style={{ color: '#4a5568', textDecoration: 'none', fontWeight: '500' }}>Store</Link>
             <Link href="/about" style={{ color: '#4a5568', textDecoration: 'none', fontWeight: '500' }}>About</Link>
           </nav>
         </div>
@@ -274,6 +275,15 @@ export default function HomePage() {
               </ul>
             </div>
             
+
+            <div>
+              <h4 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '16px' }}>Store</h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                <li style={{ marginBottom: '8px' }}><Link href="https://store.omarih.com" target="_blank" rel="noopener noreferrer" style={{ color: '#a0aec0', textDecoration: 'none' }}>Visit Store</Link></li>
+                <li style={{ marginBottom: '8px' }}><Link href="https://store.omarih.com/products" target="_blank" rel="noopener noreferrer" style={{ color: '#a0aec0', textDecoration: 'none' }}>Products</Link></li>
+                <li style={{ marginBottom: '8px' }}><Link href="https://store.omarih.com/collections" target="_blank" rel="noopener noreferrer" style={{ color: '#a0aec0', textDecoration: 'none' }}>Collections</Link></li>
+              </ul>
+            </div>
             <div>
               <h4 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '16px' }}>Resources</h4>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
